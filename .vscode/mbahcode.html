@@ -1,0 +1,94 @@
+<!-- Social Profile Container -->
+<div id="socialProfileContainer"></div>
+
+<!-- Link the External JavaScript -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Profile Data
+        const profileData = {
+            image: "https://pbs.twimg.com/profile_images/1880414747700428800/NvUzFDNu_400x400.jpg", // Corrected image URL
+            name: "Mbah Emeka Emmanuel",
+            location: "Lagos, Nigeria",
+            services: "I provide front-end development, UI/UX design, and web consulting services.",
+            socialLinks: [
+                { name: "GitHub", url: "https://github.com/Humble207" }, // Corrected URL
+                { name: "Frontend Mentor", url: "https://www.frontendmentor.io/" },
+                { name: "LinkedIn", url: "https://www.linkedin.com/in/mbah-emeka-emmanuel-29579092/" },
+                { name: "Twitter", url: "https://x.com/Maaziemeka" },
+                { name: "Instagram", url: "https://instagram.com/maazi_emeka/" }
+            ]
+        };
+
+        // Select the container
+        const container = document.getElementById("socialProfileContainer");
+
+        // Create profile card
+        container.innerHTML = `
+            <style>
+                .social-profile-container {
+                    background-color: black;
+                    padding: 20px;
+                    text-align: center;
+                    font-family: Arial, sans-serif;
+                }
+                .social-profile-card {
+                    background-color: Green;
+                    padding: 20px;
+                    border-radius: 10px;
+                    max-width: 350px;
+                    margin: auto;
+                    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+                }
+                .profile-pic {
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    margin-bottom: 10px;
+                }
+                h2 {
+                    margin: 0;
+                    color: black;
+                }
+                .location {
+                    color: black;
+                    font-size: 14px;
+                    margin: 5px 0;
+                }
+                .services {
+                    font-size: 12px;
+                    margin: 15px 0;
+                    color: black;
+                }
+                .social-links a {
+                    display: block;
+                    background: white;
+                    color: black;
+                    text-decoration: none;
+                    padding: 4px;
+                    margin: 5px 0;
+                    width: 100%;
+                    border-radius: 5px;
+                    font-weight: bold;
+                    border: 1px solid #ccc;
+                }
+                .social-links a:hover {
+                    background: #ddd;
+                }
+            </style>
+
+            <div class="social-profile-container">
+                <div class="social-profile-card">
+                    <img src="${profileData.image}" alt="Profile Picture" class="profile-pic">
+                    <h2>${profileData.name}</h2>
+                    <p class="location">${profileData.location}</p>
+                    <p class="services">${profileData.services}</p>
+                    <div class="social-links">
+                        ${profileData.socialLinks.map(link => `
+                            <a href="${link.url}" target="_blank">${link.name}</a>
+                        `).join("")}
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+</script>
