@@ -6,88 +6,121 @@
   <meta name="description" content="Portfolio of Mbah Emeka Emmanuel — Social Media Manager, Digital Marketer, UI Designer, and Cinematographer/Video Editor">
   <title>Mbah Emeka Emmanuel — Portfolio</title>
   <style>
-    body { font-family: Arial, Helvetica, sans-serif; line-height: 1.6; margin: 0; padding: 0 1rem; color: #222 }
-    header, nav, main, footer { max-width: 900px; margin: 0 auto; }
-    nav ul { list-style: none; padding: 0; }
-    nav a { text-decoration: none; color: #0366d6 }
-    nav li > ul { margin-left: 1rem; }
-    footer { border-top: 1px solid #eee; padding-top: 1rem; margin-top: 2rem; }
+    :root{--accent:#0366d6;--muted:#666;--bg:#fafafa;--max-width:1000px}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;line-height:1.5;color:#0b0b0b;background:var(--bg);margin:0;padding:1rem}
+    .container{max-width:var(--max-width);margin:0 auto;background:#fff;padding:1.25rem;border-radius:8px;box-shadow:0 6px 18px rgba(12,12,12,0.06)}
+    header{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .brand{display:flex;align-items:center;gap:0.75rem}
+    .brand img{width:64px;height:64px;border-radius:50%;object-fit:cover}
+    nav ul{display:flex;gap:1rem;list-style:none;padding:0;margin:0}
+    nav a{color:var(--accent);text-decoration:none}
+    .hero{display:grid;grid-template-columns:1fr;gap:1rem;align-items:center;padding:1rem 0}
+    .hero-inner{display:flex;gap:1rem;align-items:center}
+    .hero img{width:130px;height:130px;border-radius:12px;object-fit:cover}
+    h1{font-size:1.5rem;margin:0}
+    h2{font-size:1.25rem;margin-top:0}
+    .roles{color:var(--muted);font-size:0.95rem}
+    .grid{display:grid;grid-template-columns:1fr;gap:1rem}
+    .card{background:#fff;padding:0.9rem;border-radius:6px;border:1px solid #f0f0f0}
+    footer{margin-top:1.25rem;color:var(--muted);font-size:0.95rem}
+    @media(min-width:700px){
+      .hero{grid-template-columns:1fr 320px}
+      .hero-inner{flex-direction:column;align-items:flex-start}
+      .grid{grid-template-columns:repeat(2,1fr)}
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Mbah Emeka Emmanuel</h1>
-    <nav aria-label="Main navigation">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li>Menu
-          <ul>
-            <li><a href="#services">My services</a></li>
-            <li><a href="#projects">Personal projects</a></li>
-            <li><a href="#contact">Reach out</a></li>
-            <li>Nisl sed aliquam</li>
-            <li>Dolore adipiscing</li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </header>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <img src="assets/avatar.svg" alt="Profile photo — Mbah Emeka Emmanuel">
+        <div>
+          <h1>Mbah Emeka Emmanuel</h1>
+          <div class="roles">Social Media Manager • Digital Marketer • UI Designer • Cinematographer / Video Editor</div>
+        </div>
+      </div>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <main>
-    <section id="home">
-      <h2>Hello — welcome to my portfolio</h2>
-      <p><strong>Social Media Manager</strong> | <strong>Digital Marketer</strong> | <strong>UI Designer</strong> | <strong>Cinematographer / Video Editor</strong></p>
+    <main>
+      <section id="home" class="hero">
+        <div>
+          <h2>Hi — I help brands grow with data-driven social media, thoughtful product UI, and cinematic video.</h2>
+          <p class="roles">I build strategies, design interfaces, and craft video to tell stories that convert audiences into customers.</p>
+          <p><a href="#contact">Get started</a> • <a href="#projects">See projects</a></p>
+        </div>
+        <aside>
+          <div class="card">
+            <strong>Location:</strong> Lagos, Nigeria<br>
+            <strong>Email:</strong> <a href="mailto:mbahemeka31@gmail.com">mbahemeka31@gmail.com</a><br>
+            <strong>Phone:</strong> <a href="tel:+2348055653427">(+234) 805-565-3427</a>
+          </div>
+        </aside>
+      </section>
 
-      <section id="services">
-        <h3>Social Media Manager</h3>
-        <p>A social media manager runs and grows a brand’s social channels, plans and publishes content, engages audiences, and measures performance to support business goals.</p>
-
-        <h3>Digital Marketer</h3>
-        <p>A digital marketer helps businesses reach target audiences online, increase awareness and conversions through strategies such as social media marketing, content, and analytics.</p>
-
-        <h3>UI Designer</h3>
-        <p>A UI designer creates clear and attractive interfaces that improve user experience, guide users through products, and help businesses communicate more effectively.</p>
-
-        <h3>Cinematographer / Video Editor</h3>
-        <p>I capture and edit video content to tell visual stories — focusing on composition, lighting, sound, and pacing to produce professional final videos.</p>
-
-        <p><a href="#contact">Get Started</a> | <a href="#projects">Learn More</a></p>
+      <section id="services" class="grid">
+        <article class="card">
+          <h3>Social Media Management</h3>
+          <p>Running and growing brands' social channels through planning, content creation, publishing, community engagement and performance measurement.</p>
+        </article>
+        <article class="card">
+          <h3>Digital Marketing</h3>
+          <p>Strategy, campaigns, and analytics to attract the right customers and increase conversions across channels.</p>
+        </article>
+        <article class="card">
+          <h3>UI Design</h3>
+          <p>Designing intuitive interfaces and prototypes that improve usability and increase product conversion.</p>
+        </article>
+        <article class="card">
+          <h3>Cinematography & Video Editing</h3>
+          <p>Producing high-quality video content — from planning and capture to editing and delivery.</p>
+        </article>
       </section>
 
       <section id="projects">
-        <h2>My Portfolio</h2>
-
-        <h3>Twitter sentiment analysis</h3>
-        <p>This project analyzes public sentiment about three influential Nigerian presidential candidates during the 2023 general elections. It includes data scraping from Twitter, cleaning, exploratory analysis, and sentiment classification.</p>
-        <p><a href="https://github.com">Find out more</a></p>
-
-        <h3>911 calls data analysis</h3>
-        <p>An exploratory analysis of 911 call records received in the UK between 2015 and 2016, identifying common call types, trends over time, and insights useful for response planning.</p>
-        <p><a href="https://github.com">Find out more</a></p>
-
-        <h3>Loan data analysis</h3>
-        <p>Analysis of loan portfolio data for a financial institution, using bivariate and multivariate methods to surface patterns that inform business strategy and risk management.</p>
-        <p><a href="https://github.com">Find out more</a></p>
+        <h2>Selected projects</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Twitter sentiment analysis</h3>
+            <p>Analyzed public sentiment for three influential Nigerian presidential candidates during the 2023 general election. Included scraping, cleaning, EDA and sentiment classification.</p>
+            <p><a href="https://github.com">Repository</a></p>
+          </div>
+          <div class="card">
+            <h3>911 calls data analysis</h3>
+            <p>Exploratory analysis of 911 call records in the UK between 2015–2016 to identify trends useful for response planning.</p>
+            <p><a href="https://github.com">Repository</a></p>
+          </div>
+          <div class="card">
+            <h3>Loan data analysis</h3>
+            <p>Used statistical analysis to surface patterns in loan portfolio data, informing strategy and risk decisions.</p>
+            <p><a href="https://github.com">Repository</a></p>
+          </div>
+        </div>
       </section>
-    </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Location: Lagos, Nigeria</p>
-      <p>Email: <a href="mailto:mbahemeka31@gmail.com">mbahemeka31@gmail.com</a></p>
-      <p>Phone: <a href="tel:+2348055653427">(+234) 805-565-3427</a>, <a href="tel:+2349162173235">(+234) 916-217-3235</a></p>
-      <p>WhatsApp: <a href="https://wa.me/14427880510">+1 442-788-0510</a></p>
-    </section>
-  </main>
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>If you'd like to work together, send a message to <a href="mailto:mbahemeka31@gmail.com">mbahemeka31@gmail.com</a> or use the links below.</p>
+        <ul>
+          <li><a href="https://web.facebook.com">Facebook</a></li>
+          <li><a href="https://x.com/MaaziemekaAI">X / Twitter</a></li>
+          <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+        </ul>
+      </section>
+    </main>
 
-  <footer>
-    <h2>Socials</h2>
-    <ul>
-      <li><a href="https://web.facebook.com">Facebook</a></li>
-      <li><a href="https://x.com/MaaziemekaAI">X / Twitter</a></li>
-      <li><a href="https://www.linkedin.com">LinkedIn</a></li>
-    </ul>
-    <p>© Mbah Emeka Emmanuel. All rights reserved.</p>
-  </footer>
+    <footer>
+      <p>© Mbah Emeka Emmanuel. All rights reserved.</p>
+    </footer>
+  </div>
 </body>
 </html>
