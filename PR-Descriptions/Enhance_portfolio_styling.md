@@ -1,0 +1,1 @@
+### Enhance portfolio styling and add hero section\n\n- Adds a responsive hero section and contact card\n- Improves HTML semantics and accessibility (lang, meta, aria-label)\n- Adds mobile-first responsive CSS and reorganizes content into header/main/footer\n- Replaces placeholder avatar with the provided profile photo\n- Cleans up typos and clarifies project/service descriptions
